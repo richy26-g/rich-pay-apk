@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dompetku — Atur Uang Tanpa Ribet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0B1D33; --panel:#122A47; --teal:#2DD4BF; --gold:#F5C242; --text:#EAF1F8;
+  --display:'Space Grotesk',sans-serif; --sans:'Inter',sans-serif;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg); color:var(--text); font-family:var(--sans);}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  nav{display:flex; justify-content:space-between; align-items:center; padding:24px 32px;}
+  .logo{font-family:var(--display); font-weight:700; font-size:20px;}
+  .logo span{color:var(--teal);}
+  nav ul{list-style:none; display:flex; gap:28px; font-size:14px; opacity:0.85;}
+  .btn{background:var(--teal); color:var(--bg); font-weight:600; padding:13px 26px; border-radius:8px; text-decoration:none; font-size:14px;}
+  .hero{display:grid; grid-template-columns:1.1fr 1fr; gap:40px; align-items:center; padding:70px 32px 100px;}
+  .eyebrow{color:var(--gold); font-size:13px; letter-spacing:2px; text-transform:uppercase; margin-bottom:18px;}
+  h1{font-family:var(--display); font-weight:700; font-size:clamp(34px,4.6vw,54px); line-height:1.08;}
+  .hero p{margin-top:20px; color:rgba(234,241,248,0.7); font-size:17px; max-width:460px;}
+  .stat-row{display:flex; gap:36px; margin-top:36px;}
+  .stat b{font-family:var(--display); font-size:28px; display:block; color:var(--teal);}
+  .stat span{font-size:12px; color:rgba(234,241,248,0.55);}
+  .mock{background:var(--panel); border-radius:20px; padding:26px; border:1px solid rgba(255,255,255,0.06);}
+  .mock-top{display:flex; justify-content:space-between; font-size:13px; opacity:0.6; margin-bottom:16px;}
+  .balance{font-family:var(--display); font-size:38px; font-weight:700;}
+  .bar-track{background:rgba(255,255,255,0.08); border-radius:20px; height:10px; margin:20px 0 8px; overflow:hidden;}
+  .bar-fill{background:linear-gradient(90deg,var(--teal),var(--gold)); height:100%; width:64%; border-radius:20px;}
+  .mock-row{display:flex; justify-content:space-between; padding:12px 0; border-top:1px solid rgba(255,255,255,0.06); font-size:14px;}
+  section{padding:80px 32px;}
+  .features{background:var(--panel); border-top:1px solid rgba(255,255,255,0.06);}
+  .sectitle{font-family:var(--display); font-size:clamp(26px,3.6vw,40px); max-width:560px; margin-bottom:50px;}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; max-width:1120px; margin:0 auto;}
+  .fcard{background:var(--bg); border-radius:14px; padding:28px; border:1px solid rgba(255,255,255,0.06);}
+  .fcard .ic{width:38px; height:38px; border-radius:9px; background:rgba(45,212,191,0.15); margin-bottom:18px;}
+  .fcard h3{font-family:var(--display); font-size:19px; margin-bottom:10px;}
+  .fcard p{font-size:14px; color:rgba(234,241,248,0.6); line-height:1.5;}
+  .cta-final{text-align:center; padding:110px 32px;}
+  .cta-final h2{font-family:var(--display); font-size:clamp(28px,4.4vw,48px); max-width:600px; margin:0 auto 30px;}
+  footer{padding:36px 32px; border-top:1px solid rgba(255,255,255,0.06); font-size:13px; opacity:0.5; display:flex; justify-content:space-between;}
+  @media(max-width:860px){.hero{grid-template-columns:1fr;} .grid3{grid-template-columns:1fr;} nav ul{display:none;}}
+</style>
+</head>
+<body>
+<nav class="wrap">
+  <div class="logo">Dompet<span>ku</span></div>
+  <ul><li>Fitur</li><li>Keamanan</li><li>Harga</li><li>FAQ</li></ul>
+  <a href="#" class="btn">Coba Gratis</a>
+</nav>
+
+<section class="hero wrap">
+  <div>
+    <div class="eyebrow">Aplikasi Keuangan Pribadi</div>
+    <h1>Tahu ke mana uangmu pergi, sebelum akhir bulan menegur.</h1>
+    <p>Dompetku mengelompokkan transaksi secara otomatis dari rekening dan e-wallet, lalu menunjukkan pola belanja yang biasanya baru kamu sadari saat sudah telat.</p>
+    <div class="stat-row">
+      <div class="stat"><b>1,2 jt+</b><span>pengguna aktif</span></div>
+      <div class="stat"><b>32%</b><span>rata-rata hemat/bulan</span></div>
+      <div class="stat"><b>4.8/5</b><span>rating aplikasi</span></div>
+    </div>
+  </div>
+  <div class="mock">
+    <div class="mock-top"><span>Saldo Bulan Ini</span><span>Juli 2026</span></div>
+    <div class="balance">Rp 4.230.000</div>
+    <div class="bar-track"><div class="bar-fill"></div></div>
+    <div class="mock-top"><span>64% dari anggaran</span><span>Sisa 12 hari</span></div>
+    <div class="mock-row"><span>🍜 Makan &amp; Minum</span><span>Rp 890.000</span></div>
+    <div class="mock-row"><span>🚕 Transportasi</span><span>Rp 320.000</span></div>
+    <div class="mock-row"><span>📚 Kuliah</span><span>Rp 150.000</span></div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="wrap">
+    <div class="eyebrow">Fitur Utama</div>
+    <h2 class="sectitle">Dirancang supaya kamu paham uangmu dalam 30 detik, bukan 30 menit.</h2>
+    <div class="grid3">
+      <div class="fcard"><div class="ic"></div><h3>Kategori otomatis</h3><p>Setiap transaksi dikelompokkan sendiri pakai machine learning, tanpa input manual.</p></div>
+      <div class="fcard"><div class="ic"></div><h3>Peringatan anggaran</h3><p>Notifikasi saat pengeluaran kategori tertentu mendekati batas yang kamu atur.</p></div>
+      <div class="fcard"><div class="ic"></div><h3>Laporan bulanan</h3><p>Ringkasan visual yang bisa diekspor ke PDF untuk catatan keuangan pribadi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final wrap">
+  <h2>Mulai catat, sebelum gajian berikutnya datang.</h2>
+  <a href="#" class="btn" style="padding:16px 34px; font-size:15px;">Unduh Dompetku</a>
+</section>
+
+<footer class="wrap"><span>© 2026 Dompetku</span><span>Kebijakan Privasi · Syarat Layanan</span></footer>
+</body>
+</html>
